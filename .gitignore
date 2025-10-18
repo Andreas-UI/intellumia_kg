@@ -1,0 +1,59 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+*.log
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+.conda/
+*.env
+*.venv
+
+# ---- Build / Distribution ----
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+lib/
+
+# ---- Jupyter / Notebooks ----
+.ipynb_checkpoints/
+.profile_default/
+ipython_config.py
+
+# ---- IDEs / Editors ----
+.vscode/
+.idea/
+.spyproject/
+*.sublime-workspace
+*.sublime-project
+
+# ---- OS / Misc ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Environments / Secrets ----
+.env
+.env.*
+*.pem
+*.key
+*.crt
