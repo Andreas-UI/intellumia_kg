@@ -6,6 +6,7 @@
 It not only extracts **entities, relations, and events** from natural language, but also models **personality traits** of subjects based on contextual evidence.
 
 The system uses **Large Language Models (LLMs)** as reasoning engines at several stages, combined with deterministic data handling and confidence calibration to ensure accuracy, interpretability, and cost efficiency.
+Design walkthrough: [Watch here](https://www.loom.com/share/82e6e9eea18d45cd812de5579345ec4b?sid=a54cad1e-e02f-40dc-9702-b291ec3f742b) [https://www.loom.com/share/82e6e9eea18d45cd812de5579345ec4b?sid=a54cad1e-e02f-40dc-9702-b291ec3f742b](https://www.loom.com/share/82e6e9eea18d45cd812de5579345ec4b?sid=a54cad1e-e02f-40dc-9702-b291ec3f742b)
 
 ---
 
