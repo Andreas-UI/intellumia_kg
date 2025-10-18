@@ -111,6 +111,38 @@ Input Text  →  Preprocessing  →  P1–P4 Pipelines  →  R1–R3 Reducers  �
 
 ````
 
+```mermaid
+flowchart LR
+    classDef llm fill:#fff3cd,stroke:#d4a017,color:#2b2b2b
+    classDef det fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef io fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+
+    A[("Long Text Document")]:::io
+    B["Preprocessing & Chunking"]:::det
+
+    subgraph CHUNK["Per-Chunk Processing"]
+        direction TB
+        P1["P1: Entities & Mentions"]:::llm
+        P2["P2: Coreference"]:::llm
+        P3["P3: Relations & Events"]:::llm
+        P4["P4: Personality Traits"]:::llm
+        P1 --> P2 --> P3 --> P4
+    end
+
+    subgraph REDUCE["Reduction & Fusion"]
+        direction TB
+        R1["Fuse Entities"]:::det
+        R2["Merge Relations & Events"]:::det
+        R3["Aggregate Traits"]:::det
+        R1 --> R2 --> R3
+    end
+
+    V["Visualization → Knowledge Graph"]:::det
+
+    A --> B --> CHUNK --> REDUCE --> V
+
+```
+
 | Stage | Module | Purpose |
 |--------|---------|----------|
 | **P1** | `entities_mentions` | Extracts named entities and mentions using LLMs. |
